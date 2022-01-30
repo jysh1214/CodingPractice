@@ -1,1 +1,1 @@
-# Codility Practice
+# Codility

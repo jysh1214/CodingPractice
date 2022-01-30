@@ -1,6 +1,6 @@
 # [Peaks](https://app.codility.com/programmers/lessons/10-prime_and_composite_numbers/peaks/)
 
-## 81
+## Total Score 81
 ```c++
 #include <vector>
 
@@ -50,7 +50,7 @@ int solution(vector<int>& A) {
     return maxNumOfBlocks;
 }
 ```
-
+### Comment
 原因:
 切三份不行，不代表四份不行，要計算全部因數
 
@@ -58,7 +58,7 @@ int solution(vector<int>& A) {
 
 四份: O O X|X O O|O O X|X O O
 
-## 100 分
+## Total Score 100
 ```c++
 #include <vector>
 
