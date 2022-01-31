@@ -59,3 +59,57 @@ vector<int> solution(int N, vector<int>& P, vector<int>& Q) {
 
 ### Comment
 應該全部算完在查表比較快
+
+## Total Score 100
+```c++
+#include <math.h>
+#include <limits.h>
+#include <vector>
+#include <algorithm>
+#include <set>
+
+using namespace std;
+
+namespace {
+    inline bool isSemiprime(int num) {
+        int cnt = 0;
+        for (int i = 2; cnt < 2 && i * i <= num; ++i) {
+            while (num % i == 0) {
+                ++cnt;
+                num /= i;
+            }
+        }
+        // 如能被非質數 x 整除且 num / x > 1，而 x 有因數為 y, z
+        // 則 i = y, z 時會被整除
+        // 此時 num 會是 num / x > 1
+        // cnt 至少為 3  
+        if (num > 1) {
+            ++cnt;
+        }
+     
+        return cnt == 2;
+    }
+}
+
+vector<int> solution(int N, vector<int>& P, vector<int>& Q) {
+    vector<int> table(N + 1, 0);
+    for (int i = 2, cnt = 0; i <= N; ++i) {
+        if (isSemiprime(i)) {
+            ++cnt;
+        }
+        table[i] = cnt;
+    }
+
+    vector<int> ans;
+    for (int i = 0; i < P.size(); ++i) {
+        int lower = (P[i] - 1 < 0) ? 0 : P[i] - 1;
+        int cnt = table[Q[i]] - table[lower];
+        ans.push_back(cnt);
+    }
+
+    return ans;
+}
+```
+
+### References
+- [Check whether a number is semiprime or not](https://www.geeksforgeeks.org/check-whether-number-semiprime-not/)
