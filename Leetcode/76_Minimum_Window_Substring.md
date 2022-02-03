@@ -1,0 +1,49 @@
+# [MiniMum_Window_Substring](https://leetcode.com/problems/minimum-window-substring/)
+
+## 1.
+```c++
+class Solution {
+public:
+    string minWindow(string s, string t) {
+        unordered_map<char, int> chars;
+        for (char c : t) {
+            if (chars.find(c) != chars.end()) {
+                ++chars[c];
+            }
+            else {
+                chars[c] = 1;
+            }
+        }
+        
+        int count = 0;
+        int r = 0, l = 0;
+        int min_l = 0, min_len = s.size() + 1;
+        for (; r < s.size(); ++r) {
+            if (chars.find(s[r]) == chars.end()) {
+                continue;
+            }
+            
+            --chars[s[r]];
+            if (chars[s[r]] >= 0) {
+                ++count;
+            }
+            
+            while (count == t.size()) {
+                if (r - l + 1 < min_len) {
+                    min_l = l;
+                    min_len = r - l + 1;
+                }
+                if (chars.find(s[l]) != chars.end()) {
+                    ++chars[s[l]];
+                    if (chars[s[l]] > 0) {
+                        --count;
+                    }
+                }
+                ++l;
+            }
+        }
+        
+        return (min_len > s.size()) ? "" : s.substr(min_l, min_len);
+    }
+};
+```
