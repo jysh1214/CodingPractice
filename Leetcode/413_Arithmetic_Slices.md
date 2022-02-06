@@ -5,12 +5,16 @@ class Solution {
 public:
     int numberOfArithmeticSlices(vector<int>& nums) {
         if (nums.size() < 3) return 0;
+        // 在此結尾的等差數列樹目
         vector<int> dp(nums.size(), 0);
         for (int i = 2; i < nums.size(); ++i) {
+            // 新增加的元素 m 必定與先前的等差數列 An 形成 A + m 新的數列
+            // 加上新的後三者，所以加一
             if (nums[i] - nums[i - 1] == nums[i - 1] - nums[i - 2])
                 dp[i] = 1 + dp[i - 1];
         }
         
+        // 加總每個地方結尾的數量
         return accumulate(dp.begin(), dp.end(), 0);
     }
 };
