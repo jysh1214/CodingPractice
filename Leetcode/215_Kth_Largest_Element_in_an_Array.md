@@ -1,4 +1,4 @@
-# [Kth_Large_Element_in_an_Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+# [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 
 ```c++
 namespace {

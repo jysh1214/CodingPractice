@@ -1,4 +1,4 @@
-# [Find_First_and_Last_Position_of_Element_in_Sorted_Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+# [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 
 ## 1. 
 ```c++

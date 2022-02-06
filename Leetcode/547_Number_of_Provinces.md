@@ -1,4 +1,4 @@
-# [Number_of_Provinces](https://leetcode.com/problems/number-of-provinces/)
+# [Number of Provinces](https://leetcode.com/problems/number-of-provinces/)
 
 ```c++
 namespace {

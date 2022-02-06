@@ -1,4 +1,4 @@
-# [MiniMum_Window_Substring](https://leetcode.com/problems/minimum-window-substring/)
+# [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
 ## 1.
 ```c++

@@ -1,4 +1,4 @@
-# [347_Top_K_Frequent_Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+# [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 
 ```c++
 class Solution {

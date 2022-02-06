@@ -1,4 +1,4 @@
-# [Non_Overlapping_Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+# [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
 
 ## 1.
 ```c++

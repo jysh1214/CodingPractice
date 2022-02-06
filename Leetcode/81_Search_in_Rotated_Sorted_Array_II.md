@@ -1,4 +1,4 @@
-# [81_Search_in_Rotated_Sorted_Array_II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+# [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
 
 ## 1.
 ```c++

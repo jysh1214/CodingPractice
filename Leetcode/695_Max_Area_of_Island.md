@@ -1,4 +1,4 @@
-# [695_Max_Area_of_Island](https://leetcode.com/problems/max-area-of-island/)
+# [Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
 
 ```c++
 namespace {
