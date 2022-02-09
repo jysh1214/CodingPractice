@@ -33,3 +33,40 @@ public:
     }
 };
 ```
+
+## 2.
+```c++
+class Solution {
+public:
+    int eraseOverlapIntervals(vector<vector<int>>& intervals) {
+        map<int, int> mp;
+        int removeCount = 0;
+        for (auto p : intervals) {
+            int start = p[0];
+            int end = p[1];
+            if (mp.find(end) != mp.end()) {
+                mp[end] = max(mp[end], start);
+                ++removeCount;
+            }
+            else {
+                mp[end] = start;
+            }
+        }
+        
+        if (mp.size() <= 1) return removeCount;
+        
+        auto it = mp.begin(); ++it;
+        auto prev = mp.begin();
+        for (; it != mp.end(); ++it) {
+            if (it->second < prev->first) {
+                ++removeCount;
+            }
+            else {
+                prev = it;
+            }
+        }
+        
+        return removeCount;
+    }
+};
+```
