@@ -2,9 +2,10 @@
 
 ```c++
 namespace {
-    void perm(vector<int>& nums, int start, vector<vector<int>>& ans) {
-        if (start == nums.size()) return;
-        if (start == nums.size() - 1) {
+    void perm(vector<int>& nums, 
+              const int start, 
+              vector<vector<int>>& ans) {
+        if (start >= nums.size()) {
             ans.push_back(nums);
             return;
         }
