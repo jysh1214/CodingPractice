@@ -36,9 +36,6 @@ int m = a + (b - a) / 2;
 int m = (a + b) / 2;
 ```
 
-## Pattern ##
-
-
 ## Mindset ##
 
 #### 解題思路 ####

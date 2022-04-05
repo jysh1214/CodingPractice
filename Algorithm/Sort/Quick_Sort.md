@@ -1,25 +1,27 @@
 # Quick Sort
 
 ```c++
-void quicksort(vector<int>& nums, int start, int end)
-{
-    if (start >= end) return;
-    
-    int l = start;
-    int r = end;
-    int pivot = nums[l];
-    while (l < r) {
-        while (l < r && nums[r] >= pivot) {
-            --r;
+int Partition(int *arr, int front, int end){
+    int pivot = arr[end];
+    int i = front -1;
+    for (int j = front; j < end; j++) {
+        if (arr[j] < pivot) {
+            i++;
+            swap(&arr[i], &arr[j]);
         }
-        nums[l] = nums[r];
-        while (l < r && nums[l] <= pivot) {
-            ++l;
-        }
-        nums[r] = nums[l];
     }
-    nums[l] = pivot;
-    quicksort(nums, start, l - 1);
-    quicksort(nums, l + 1, end);
+    i++;
+    swap(&arr[i], &arr[end]);
+    return i;
+}
+void QuickSort(int *arr, int front, int end){
+    if (front < end) {
+        int pivot = Partition(arr, front, end);
+        QuickSort(arr, front, pivot - 1);
+        QuickSort(arr, pivot + 1, end);
+    }
 }
 ```
+
+## References ##
+- [https://alrightchiu.github.io/SecondRound/comparison-sort-quick-sortkuai-su-pai-xu-fa.html](https://alrightchiu.github.io/SecondRound/comparison-sort-quick-sortkuai-su-pai-xu-fa.html)
