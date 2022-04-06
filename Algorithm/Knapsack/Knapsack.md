@@ -37,7 +37,7 @@ int knapsack(vector<int> weights, vector<int> value, int N, int W)
             if (w <= i) {
                 dp[j][i] = max(
                     dp[j - 1][i],    // 不取
-                    dp[j][i - w] + v // 第 j 件物品取不定數量
+                    dp[j][i - w] + v // 第 j 件物品再多拿一件
                 );
             }
             else {
