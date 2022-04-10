@@ -48,3 +48,6 @@ for (/* 迭代 */) {
 - 435. Non-overlapping Intervals
 - 452. Minimum Number of Arrows to Burst Balloons
 - 2136. Earliest Possible Day of Full Bloom: 合併重疊區間為最小，因為在生長時間時，可以同時種植其他植物，因此高 `growTime` 優先種植，如果 `growTime` 一樣，則挑 `plantTime` 短的優先種植
+
+## References ##
+- [Greedy for Beginners [Problems | Sample solutions]](https://leetcode.com/discuss/general-discussion/669996/Greedy-for-Beginners-Problems-or-Sample-solutions/578298)
