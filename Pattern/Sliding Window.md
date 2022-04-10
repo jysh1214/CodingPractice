@@ -1,10 +1,8 @@
 # Sliding Window
 
-注意縮小 `window` 的條件
+注意 `window` 的縮小條件。
 
 ```c++
-int right = 0;
-int left = 0;
 while (/* 滿足 window 擴張條件 */) {
     // window 擴張
     ++right;
@@ -16,3 +14,6 @@ while (/* 滿足 window 擴張條件 */) {
     }
 }
 ```
+
+## 案例 ##
+- 2134. Minimum Swaps to Group All 1's Together II: 循環的 `sliding window`，注意 `window` 擴張條件
