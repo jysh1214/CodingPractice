@@ -44,6 +44,6 @@ return left - 1; // 注意
 ```
 
 ## 案例 ## 
-- 34. Find First and Last Position of Element in Sorted Array: 第一個出現為左邊界，最後出現為右邊界
-- 69. Sqrt(x): 最後會收斂在右邊界
-- 704. Binary Search: 找特定目標，不用找邊界
+- Leetcode 34. Find First and Last Position of Element in Sorted Array: 第一個出現為左邊界，最後出現為右邊界
+- Leetcode 69. Sqrt(x): 最後會收斂在右邊界
+- Leetcode 704. Binary Search: 找特定目標，不用找邊界
